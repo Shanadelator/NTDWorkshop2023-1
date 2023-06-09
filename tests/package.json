@@ -1,0 +1,43 @@
+{
+  "name": "movie-api-tests",
+  "version": "1.0.0",
+  "description": "Tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lukemufc91/NTDWorkshop2023.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lukemufc91/NTDWorkshop2023/issues"
+  },
+  "homepage": "https://github.com/Lukemufc91/NTDWorkshop2023#readme",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "jest-html-reporter": "^3.10.0",
+    "jest-junit": "^16.0.0",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "./reports/test-report.html"
+        }
+      ],
+      [
+        "jest-junit", {
+        "outputDirectory": "reports",
+        "outputName": "jest-junit.xml"
+      }
+      ]
+    ]
+  }
+}
